@@ -920,10 +920,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 022cb741-150e-41d9-936d-2da23dc64754
+  cloudProjectId: 17043714-b2fc-48a2-9264-32ca416afe64
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Kart_Game 2024-03-20_10-34-14
+  projectName: Kart_Game
   organizationId: ia_petus
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

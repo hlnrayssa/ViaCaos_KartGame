@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using KartGame.KartSystems;
 
-public class SpeedUpBerry : MonoBehaviour
+public class SpeedDown : MonoBehaviour
 {
-    public float powerupSpeed = 25;
+    public float powerdownSpeed = 5;
     bool isPowerupOn;
     public float powerupTime = 5;
     ArcadeKart arcadeKart;
@@ -25,16 +25,16 @@ public class SpeedUpBerry : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if  (other.CompareTag("PowerUp"))
+        if  (other.CompareTag("PowerDown"))
         {
             Destroy(other.gameObject);
-            StartCoroutine(ActivatePowerUp());
+            StartCoroutine(ActivatePowerDown());
         }
     }
 
-    IEnumerator ActivatePowerUp()
+    IEnumerator ActivatePowerDown()
     {
-        arcadeKart.baseStats.TopSpeed = powerupSpeed;
+        arcadeKart.baseStats.TopSpeed = powerdownSpeed;
         isPowerupOn = true;
         float powerupTimer = 0;
         while(powerupTimer <= powerupTime)

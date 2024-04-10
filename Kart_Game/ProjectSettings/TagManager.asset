@@ -7,6 +7,8 @@ TagManager:
   - PowerUp
   - PowerDown
   - PowerStop
+  - Cam1
+  - Camera 2
   layers:
   - Default
   - TransparentFX
@@ -23,8 +25,8 @@ TagManager:
   - CrashObject
   - Kart
   - TrainingCheckpoints
-  - 
-  - 
+  - Cam1
+  - Camera 2
   - 
   - 
   - 

@@ -16709,6 +16709,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4810912518991602691, guid: 19954de30401f73428254541a9ad156e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1910917297}
+    - targetCorrespondingSourceObject: {fileID: 4810912518991602691, guid: 19954de30401f73428254541a9ad156e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1910917298}
   m_SourcePrefab: {fileID: 100100000, guid: 19954de30401f73428254541a9ad156e, type: 3}
 --- !u!4 &1304724376 stripped
 Transform:
@@ -18787,6 +18790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1433199934}
   - component: {fileID: 1433199933}
+  - component: {fileID: 1433199935}
   m_Layer: 0
   m_Name: SpeedPowerUp
   m_TagString: PowerUp
@@ -18832,6 +18836,21 @@ Transform:
   - {fileID: 148880804}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1433199935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433199931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2019f44d764bbb740962a096919b0d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerupSpeed: 25
+  powerupTime: 5
+  defaultSpeed: 0
 --- !u!1001 &1441382074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24638,6 +24657,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Id: 1e015b90-7713-408c-8d9a-3a4586f0f423
+--- !u!114 &1910917298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910917296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2019f44d764bbb740962a096919b0d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerupSpeed: 40
+  powerupTime: 5
+  defaultSpeed: 0
 --- !u!4 &1939712825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1579282987822796750, guid: 941fac9249b6442cdb2d3f23472128e2, type: 3}

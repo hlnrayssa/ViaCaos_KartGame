@@ -5,9 +5,9 @@ using KartGame.KartSystems;
 
 public class SpeedUpBerry : MonoBehaviour
 {
-    public float powerupTime = 5;
-    public float powerupTimer;
     public float powerupSpeed = 25;
+    bool isPowerupOn;
+    public float powerupTime = 5;
     ArcadeKart arcadeKart;
     public float defaultSpeed;
 
@@ -15,7 +15,7 @@ public class SpeedUpBerry : MonoBehaviour
     void Start()
     {
         arcadeKart = GetComponent<ArcadeKart>();
-        defaultSpeed = arcadeKart.baseStats.TopSpeed;
+        defaultSpeed = 15;
     }
 
     // Update is called once per frame
@@ -24,26 +24,33 @@ public class SpeedUpBerry : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("PowerUp"))
+        if  (other.CompareTag("PowerUp"))
         {
             Destroy(other.gameObject);
             StartCoroutine(ActivatePowerUp());
+
+
         }
     }
 
     IEnumerator ActivatePowerUp()
     {
         arcadeKart.baseStats.TopSpeed = powerupSpeed;
-        powerupTimer = 0;
+        isPowerupOn = true;
+        float powerupTimer = 0;
         while(powerupTimer <= powerupTime)
         {
             powerupTimer += 0.1f;
+        
 
             yield return new WaitForSeconds(0.1f);
+
         }
 
         arcadeKart.baseStats.TopSpeed = defaultSpeed;
+        isPowerupOn = false;
+
     }
 }

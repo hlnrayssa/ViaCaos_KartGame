@@ -69,7 +69,11 @@ public class CarSelector : MonoBehaviour
         for (int i = 0; i < karts.Length; i++)
         {
             karts[i].SetActive(false);
+<<<<<<< Updated upstream
             kartss[index].SetActive(true);
+=======
+            karts[index].SetActive(true);
+>>>>>>> Stashed changes
         }
 
         PlayerPrefs.SetInt("carIndex", index);

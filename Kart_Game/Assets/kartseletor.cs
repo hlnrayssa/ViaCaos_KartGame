@@ -132,7 +132,7 @@ public class KartSelector : MonoBehaviour
              Debug.Log("Selected1");
              carousel.SetActive(false);
              carousel2.SetActive(true);
-        }
+         }
          else
          {
              currentCar2 = carList[selectedCar2];

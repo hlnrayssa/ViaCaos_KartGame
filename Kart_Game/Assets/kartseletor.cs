@@ -7,16 +7,16 @@ using UnityEngine.UI;
 
 public class KartSelector : MonoBehaviour
 {
-     public GameObject[] carList;
-     public int selectedCar = 0;
-     public int selectedCar2= 0;
-     public static GameObject currentCar;
-     public static GameObject currentCar2;
-     public GameObject carousel;
-     public GameObject carousel2;
-     public string sceneName;
+    public GameObject[] carList;
+    public int selectedCar = 0;
+    public int selectedCar2= 0;
+    public static GameObject currentCar;
+    public static GameObject currentCar2;
+    public GameObject carousel;
+    public GameObject carousel2;
+    public string sceneName;
 
-     private bool escolheu = false;
+    private bool escolheu = false;
      
 
     private void Start()
@@ -54,7 +54,7 @@ public class KartSelector : MonoBehaviour
         }
     }
 
-     public void RightButton()
+    public void RightButton()
      {
         if(escolheu == false)
         {
@@ -122,9 +122,7 @@ public class KartSelector : MonoBehaviour
         
     }
     
-
-
-public void SelectCar()
+    public void SelectCar()
      {
          if (!escolheu)
          {

@@ -44,12 +44,13 @@ public class Respawner : MonoBehaviour
         input.TurnInputName = "Horizontal";
         input.AccelerateButtonName = "Accelerate";
         input.BrakeButtonName = "Brake";
-        
+    
 
         input2.TurnInputName = "HorizontalP2";
         input2.AccelerateButtonName = "AccelerateP2";
         input2.BrakeButtonName = "BrakeP2";
-      
+       
 
     }
 }
+

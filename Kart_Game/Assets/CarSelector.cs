@@ -13,23 +13,27 @@ public class CarSelector : MonoBehaviour
 
     public Button prev;
 
-    int index;
+    int indexPlayer1;
+    int indexPlayer2;
+
     // Start is called before the first frame update
     void Start()
     {
-        index = PlayerPrefs.GetInt("carIndex");
+        indexPlayer1 = PlayerPrefs.GetInt("carIndexPlayer1");
+        indexPlayer2 = PlayerPrefs.GetInt("carIndexPlayer2");
 
         for(int i = 0; i < karts.Length; i++)
         {
-            karts[i].SetActive(false);
-            karts[index].SetActive(true);
+           karts[i].SetActive(false);
+           karts[indexPlayer1].SetActive(true);
+           karts[indexPlayer2].SetActive(true);
         }        
     }
 
     // Update is called once per frame
-    void Update()
+ void Update()
     {
-        if(index >= 3)
+        if(indexPlayer1 >= 3)
         {
             next.interactable = false;
         }
@@ -38,7 +42,7 @@ public class CarSelector : MonoBehaviour
             next.interactable = true;
         }
 
-        if(index <= 0)
+        if(indexPlayer1 <= 0)
         {
             prev.interactable = false;
         }
@@ -50,38 +54,38 @@ public class CarSelector : MonoBehaviour
 
     public void Next()
     {
-        index++;
+        indexPlayer1++;
 
         for (int i = 0; i < karts.Length; i++)
         {
             karts[i].SetActive(false);
-            karts[index].SetActive(true);
+            karts[indexPlayer1].SetActive(true);
+            karts[indexPlayer2].SetActive(true);
         }
 
-        PlayerPrefs.SetInt("carIndex", index);
+        PlayerPrefs.SetInt("carIndexPlayer1", indexPlayer1);
         PlayerPrefs.Save();
     }
 
     public void Prev()
     {
-        index--;
+        indexPlayer1--;
 
         for (int i = 0; i < karts.Length; i++)
         {
             karts[i].SetActive(false);
-<<<<<<< Updated upstream
-            kartss[index].SetActive(true);
-=======
-            karts[index].SetActive(true);
->>>>>>> Stashed changes
+            karts[indexPlayer1].SetActive(true);
+            karts[indexPlayer2].SetActive(true);
         }
 
-        PlayerPrefs.SetInt("carIndex", index);
+        PlayerPrefs.SetInt("carIndexPlayer1", indexPlayer1);
         PlayerPrefs.Save();
     }
 
     public void Race()
     {
+        PlayerPrefs.SetInt("carIndexPlayer2", indexPlayer2);
+        PlayerPrefs.Save();
         SceneManager.LoadSceneAsync("Multi");
     }
 }

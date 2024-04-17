@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PowerUp
+  - PowerDown
+  - PowerStop
+  - Cam1
+  - Camera 2
   layers:
   - Default
   - TransparentFX
@@ -11,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Buttons
   - 
   - PostProcessing
   - Ground
@@ -20,8 +25,8 @@ TagManager:
   - CrashObject
   - Kart
   - TrainingCheckpoints
-  - 
-  - 
+  - Cam1
+  - Camera 2
   - 
   - 
   - 

@@ -19,10 +19,10 @@ public class CarSelector : MonoBehaviour
     {
         index = PlayerPrefs.GetInt("carIndex");
 
-        for(int i = 0; i < cars.Length; i++)
+        for(int i = 0; i < karts.Length; i++)
         {
-            cars[i].SetActive(false);
-            cars[index].SetActive(true);
+            karts[i].SetActive(false);
+            karts[index].SetActive(true);
         }        
     }
 
@@ -52,10 +52,10 @@ public class CarSelector : MonoBehaviour
     {
         index++;
 
-        for (int i = 0; i < cars.Length; i++)
+        for (int i = 0; i < karts.Length; i++)
         {
-            cars[i].SetActive(false);
-            cars[index].SetActive(true);
+            karts[i].SetActive(false);
+            karts[index].SetActive(true);
         }
 
         PlayerPrefs.SetInt("carIndex", index);
@@ -66,13 +66,13 @@ public class CarSelector : MonoBehaviour
     {
         index--;
 
-        for (int i = 0; i < cars.Length; i++)
+        for (int i = 0; i < karts.Length; i++)
         {
-            cars[i].SetActive(false);
-            cars[index].SetActive(true);
+            karts[i].SetActive(false);
+            kartss[index].SetActive(true);
         }
 
-        PlayerpRefs.SetInt("carIndex", index);
+        PlayerPrefs.SetInt("carIndex", index);
         PlayerPrefs.Save();
     }
 

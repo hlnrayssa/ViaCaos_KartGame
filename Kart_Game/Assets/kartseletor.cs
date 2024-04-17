@@ -16,12 +16,12 @@ public class KartSelector : MonoBehaviour
     public GameObject carousel2;
     public string sceneName;
 
-    private bool escolheu = false;
+    private bool selected = false;
      
 
     private void Start()
     {
-        escolheu = false;
+        selected = false;
         
         carousel2.SetActive(false);
     }
@@ -32,23 +32,23 @@ public class KartSelector : MonoBehaviour
         carousel.transform.position = Vector3.Lerp(carousel.transform.position, new Vector3 (selectedCar * -5, 0, 0), Time.deltaTime*1);
         carousel2.transform.position = Vector3.Lerp(carousel2.transform.position, new Vector3(selectedCar2 * -5, 0, 0), Time.deltaTime * 1);
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) && escolheu == false)
+        if (Input.GetKeyDown(KeyCode.RightArrow) && selected == false)
          {
              RightButton();
          }
 
-         if (Input.GetKeyDown(KeyCode.LeftArrow) && escolheu == false)
+         if (Input.GetKeyDown(KeyCode.LeftArrow) && selected == false)
          {
              LeftButton();
          }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) && escolheu == true)
+        if (Input.GetKeyDown(KeyCode.RightArrow) && selected == true)
         {
             RightButton2();
            
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && escolheu == true)
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && selected == true)
         {
             LeftButton2();
         }
@@ -56,7 +56,7 @@ public class KartSelector : MonoBehaviour
 
     public void RightButton()
      {
-        if(escolheu == false)
+        if(selected == false)
         {
             currentCar = carList[selectedCar];
 
@@ -74,7 +74,7 @@ public class KartSelector : MonoBehaviour
 
     public void RightButton2()
     {
-        if (escolheu == true)
+        if (selected == true)
         {
             currentCar2 = carList[selectedCar2];
 
@@ -90,7 +90,7 @@ public class KartSelector : MonoBehaviour
 
     public void LeftButton()
      {
-        if (escolheu == false)
+        if (selected == false)
         {
             currentCar = carList[selectedCar];
 
@@ -106,7 +106,7 @@ public class KartSelector : MonoBehaviour
      }
         public void LeftButton2()
     {
-        if (escolheu == true)
+        if (selected == true)
         {
             currentCar2 = carList[selectedCar2];
 
@@ -124,19 +124,19 @@ public class KartSelector : MonoBehaviour
     
     public void SelectCar()
      {
-         if (!escolheu)
+         if (!selected)
          {
              
              currentCar = carList[selectedCar];
-             escolheu = true;
-             Debug.Log("Escolheu1");
+             selected = true;
+             Debug.Log("Selected1");
              carousel.SetActive(false);
              carousel2.SetActive(true);
         }
          else
          {
              currentCar2 = carList[selectedCar2];
-             Debug.Log("Escolheu2");
+             Debug.Log("Selected2");
              SceneManager.LoadSceneAsync(sceneName);
          }
 

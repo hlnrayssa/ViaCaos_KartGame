@@ -51,15 +51,12 @@ public class Respawner : MonoBehaviour
         virtualCameras[1].LookAt = car2.transform;
 
         KeyboardInput input = car.GetComponent<KeyboardInput>();
-        KeyboardInput input2 = car2.GetComponent<KeyboardInput>();
 
         input.TurnInputName = "Horizontal";
         input.AccelerateButtonName = "Accelerate";
         input.BrakeButtonName = "Brake";
 
-        input2.TurnInputName = "HorizontalP2";
-        input2.AccelerateButtonName = "AccelerateP2";
-        input2.BrakeButtonName = "BrakeP2";
+
     }
 
 }
